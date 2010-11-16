@@ -1,0 +1,68 @@
+% Copyright 2007 by Ken Cao
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file LICENSE for more details.
+
+\ProvidesPackageRCS $Header: /home/kcao/beamer/base/themes/theme/beamerthemeRedhatKC.sty,v d02a7cf4d8ae 2010/11/05 09:11:41 kcao $
+
+
+\mode<presentation>
+
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{subtitle}{fg=white}
+\setbeamercolor{author}{fg=white}
+\setbeamercolor{institute}{fg=white}
+\setbeamercolor{date}{fg=white}
+\setbeamercolor{frametitle}{fg=black}
+
+\setbeamerfont{title}{series=\bfseries}
+\setbeamerfont{subtitle}{size=\small}
+\setbeamerfont{institute}{size=\large}
+
+\setbeamertemplate{title page}
+{
+\vbox{}
+\vfill
+\begin{centering}
+  \begin{beamercolorbox}[sep=8pt,left]{title}
+    \usebeamerfont{title}\inserttitle\par%
+    % the optional subtitle
+    \ifx\insertsubtitle\@empty
+    \else%
+      \vskip0.25em%
+      {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+    \fi%
+  \end{beamercolorbox}%
+  \vskip3em\par
+  \begin{beamercolorbox}[sep=8pt,left]{author}
+    \usebeamerfont{author}\insertauthor
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[sep=8pt,left]{institute}
+    \usebeamerfont{institute}\insertinstitute
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[sep=8pt,left]{date}
+    \usebeamerfont{date}\insertdate
+  \end{beamercolorbox}\vskip0.5em
+  {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+\end{centering}
+\vfill
+}
+
+%\setbeamertemplate{frametitle}[default][right]
+
+\setbeamertemplate{frametitle}
+{
+%	\hspace*{-0.035\paperwidth} \vbox{\insertframetitle}\par
+	\vspace*{0.132\paperheight} \vbox{\insertframetitle}\par
+%	\hspace*{-0.045\paperwidth}\pgfuseshading{frametitlebarhshad}
+}
+
+
+\useinnertheme{circles}
+
+\mode
+<all>

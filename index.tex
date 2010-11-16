@@ -1,0 +1,162 @@
+% index.tex
+\documentclass{beamer}
+
+\usetheme{RedHatKC}
+
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{white}}
+
+
+\title{Red Hat Slides Topic}
+\subtitle{the Slides sub title}
+\author[kcao]{Cao, Chen \\ \texttt{kcao@redhat.com}}
+\institute{Red Hat}
+\date{\today}
+
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+
+
+\begin{document}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{red}}
+
+  \frame{
+    \titlepage
+  }
+}
+
+\section[Outline]{}
+\frame{
+  \frametitle{Outline}
+  \tableofcontents
+}
+
+\section{Introduce to xxx}
+\subsection{What is xxx?}
+\frame
+{
+  \frametitle{What is xx?}
+
+\textbf{Hello}
+
+The xxx \dots
+
+}
+
+\frame
+{
+  \frametitle{What is yyy?}
+
+  xxxx xxx xccc xcxc xc xc xccccc xccxcx  xxcxc  xccx adf
+  xxxx xxx xccc xcxc xc xc xccccc xccxcx  xxcxc  xccx adf
+\bigskip
+  xxxx xxx xccc xcxc xc xc xccccc xccxcx  xxcxc  xccx adf
+  xxxx xxx xccc xcxc xc xc xccccc xccxcx  xxcxc  xccx adf
+
+}
+
+
+\subsection{aaa bbb ccc dd}
+\frame
+{
+  \frametitle{what and }
+  \begin{itemize}
+  \item On host: \\
+  BIOS
+
+  \item In guest: \\
+  Through startup cmd.
+  \end{itemize}
+}
+\frame
+{
+  \frametitle{xxx what and xxx}
+  Command:
+
+  'execstack -s' set-execstack
+}
+
+
+
+\section{About Shellcode}
+\subsection{Demo}
+\frame
+{
+  \frametitle{Demo}
+  Code used in kvm-autotest
+}
+
+\subsection{Write Howto}
+\frame
+{
+  \frametitle{Write Shellcode Mini-Howto}
+  Writing sc from scratch (to maintain this TC)
+
+}
+
+\subsubsection{ShellCode Basics}
+\frame
+{
+  \frametitle{ShellCode Basics}
+  \begin{itemize}
+  \item Execute the codes that are supposed to be data,
+  rather than instructions. By buffer (or stack) overflow, or mmap().
+
+  \pause
+  \item Examples
+  \end{itemize}
+}
+
+\subsubsection{Steps to Write SC}
+\frame
+{
+  \frametitle{Steps to Write SC}
+  \begin{itemize}
+  \item hexdump -C a.out (objdump -D a.out)
+  \pause
+  \item gcc -fno-stack-protector \dots
+  \pause
+  \item Examples
+  \end{itemize}
+}
+
+
+\section{Resources}
+\frame
+{
+  \frametitle{Resources}
+  \begin{itemize}
+  \item
+  http://en.wikipedia.org/wiki/NX\_bit
+  \item
+  Intel$^{\tiny{\textregistered}}$ 64 and IA-32 Architectures Software Developer’s Manual: Volume 3A
+  \item
+  BUFFER OVERFLOWS DEMYSTIFIED
+  \item
+  Smashing The Stack For Fun And Profit
+  \item
+  and etc.
+  \end{itemize}
+}
+
+\section{Q\&A}
+\frame
+{
+  \frametitle{Q\&A}
+
+  \begin{itemize}
+  \item Any Questions?
+  \pause
+  \item Thank you.
+  \end{itemize}
+}
+
+\end{document}
